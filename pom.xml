@@ -10,6 +10,12 @@
     <modules>
         <module>tensquare_common</module>
         <module>tensquare_base</module>
+        <module>tensquare_recruit</module>
+        <module>tensquare_qa</module>
+        <module>tensquare_eureka</module>
+        <module>tensquare_spit</module>
+        <module>tensquare_user</module>
+        <module>tensquare_config</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -42,9 +48,20 @@
 
     </dependencies>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Finchley.M9</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <repositories>
         <repository>
-            <id>spring-snapshots</id>
+            <id>spring‐snapshots</id>
             <name>Spring Snapshots</name>
             <url>https://repo.spring.io/snapshot</url>
             <snapshots>
@@ -52,7 +69,7 @@
             </snapshots>
         </repository>
         <repository>
-            <id>spring-milestones</id>
+            <id>spring‐milestones</id>
             <name>Spring Milestones</name>
             <url>https://repo.spring.io/milestone</url>
             <snapshots>
@@ -60,10 +77,9 @@
             </snapshots>
         </repository>
     </repositories>
-
     <pluginRepositories>
         <pluginRepository>
-            <id>spring-snapshots</id>
+            <id>spring‐snapshots</id>
             <name>Spring Snapshots</name>
             <url>https://repo.spring.io/snapshot</url>
             <snapshots>
@@ -71,7 +87,7 @@
             </snapshots>
         </pluginRepository>
         <pluginRepository>
-            <id>spring-milestones</id>
+            <id>spring‐milestones</id>
             <name>Spring Milestones</name>
             <url>https://repo.spring.io/milestone</url>
             <snapshots>

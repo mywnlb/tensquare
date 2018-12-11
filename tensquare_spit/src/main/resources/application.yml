@@ -1,0 +1,15 @@
+server:
+  port: 9006
+spring:
+  application:
+    name: tensquare_spit
+  data:
+    mongodb:
+      host: 192.168.85.128
+      database: splitdb
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8888/eureka
+  instance:
+          prefer-ip-address: true

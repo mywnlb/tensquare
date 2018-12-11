@@ -1,4 +1,4 @@
-package com.tensquare.base;
+package com.tensquare.split;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,20 +7,21 @@ import org.springframework.context.annotation.Bean;
 import util.IdWorker;
 
 /**
- * describe: 启动类
+ * describe:
  *
  * @author lb
- * @date 2018/11/27
+ * @date 2018/12/11
  */
 @SpringBootApplication
 @EnableEurekaClient
-public class BaseApplication {
+public class SplitApplication {
     public static void main(String[] args) {
-        SpringApplication.run(BaseApplication.class,args);
+        SpringApplication.run(SplitApplication.class,args);
     }
 
     @Bean
     public IdWorker idWorker(){
-        return new IdWorker();
+        return new IdWorker(1,1);
     }
+
 }
