@@ -2,10 +2,10 @@ server:
   port: 8888
 spring:
   application:
-    name: tensquare_eureka
+    name: tensquare-eureka
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://127.0.0.1:${server.port}/eureka
+      defaultZone: http://192.168.85.128:${server.port}/eureka
